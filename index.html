@@ -1,0 +1,137 @@
+<!-- 
+Några få inledande ord då, jag har inga bra så detta nonsens får duga. Skulle vilja ha drop-down menyer men hann inte 
+med så jag får inkludera dem med rubriker.
+
+alt-texter har jag endast ett fåtal för att bilderna är ju ganska intet-sägande
+
+ -->
+ <!DOCTYPE html>
+ <html lang="sv">
+   <head>
+   
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <title>Industribolaget - sammhällets hållbara partner!</title><!-- Vad är en titel utan ost?-->
+     
+     <link rel="stylesheet" href="../css/main.css" type="text/css">
+     <link rel="stylesheet" href="../css/GridLayout.css" type="text/css">
+     <link rel="stylesheet" href="../css/img.css" type="text/css">
+     
+     <link rel="icon" href="img/logga.png">
+ 
+   </head>
+   <body>
+     
+     <div class="gridContainer">
+       <div class="invisibile">
+         <p></p>
+       </div>
+       
+       <div class="gridHead">
+         <a href="Index.html" class="theLink"><h2>Industribolaget AB</h2></a>
+       </div>
+       
+       <!-- Tillgänglighetsrutan -->
+       <div class="accessability">
+         <!-- ordet lättläst är inte lättläst kom på ett annat? -->
+         <input type="button" value="Lättläst" class="easyRead" id="sizeChange" onclick="changeFontSize()"><br>
+         <input type="button" value="English" class="easyRead" id="langChange" onclick="changeLanguage()">
+       </div>
+       
+       <!-- Meny -->
+       <div class="menuGridContainer">
+         <div class="menuGridTitle">
+           <!-- ändra filen till matchande format, snabbare laddning. Måste använda javascript då så uteslut det-->
+           <a href="Index.html"><img src="img/logga.png" class="titleImage" height="64" width="64" alt="Logga för ibab"></a>
+         </div>
+         <div class="menuGridLinks">
+           <ul class="menuList">
+             <li id="link1"><a href="About.html">Om</a></li>
+             <li id="link2"><a href="Candidate.html">Kandidater</a></li>
+             <li id="link3"><a href="Project.html">Projekt</a></li>
+             <li id="link4"><a href="Contact.html">Kontakt</a></li>
+             
+           </ul>
+         </div>
+       </div>
+       
+       <div class="gridSide" id="gridLeft">
+         <p></p>
+       </div>
+       
+       <div class ="gridCenter">
+       <!-- for detecting orientation
+         <p class="orientationLandscape">Landscape</p>
+         <p class="orientationPortrait">Portrait</p>
+         
+         Nedan, huvudinnehåll, alltså main och inte head :)
+       -->
+         <h2>Välkommen!</h2>
+         <p>
+         Aliquam at semper ipsum. Cras vulputate commodo sagittis. Mauris commodo pellentesque nulla nec pretium. 
+         Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. 
+         Vivamus ligula neque, egestas quis egestas at, interdum a nisi. Proin eu placerat enim, at pharetra orci. 
+         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dictum lacus 
+         quis ultricies placerat. Mauris commodo ligula sed feugiat pulvinar. Vestibulum rutrum mollis placerat. Quisque 
+         vulputate sed magna at suscipit. Proin at dui varius, fermentum ex at, vehicula eros. Curabitur dignissim gravida 
+         lorem, quis bibendum mi vestibulum eget.
+         </p>
+         <h3>Senaste nytt</h3>
+         <p class="mcParagraph">
+         
+         <img class="mcImgRight" src="img/square-img1.png" alt="">
+         
+           Aliquam at semper ipsum. Cras vulputate commodo sagittis. Mauris commodo pellentesque nulla nec pretium. 
+           Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. 
+           Vivamus ligula neque, egestas quis egestas at, interdum a nisi. Proin eu placerat enim, at pharetra orci. 
+         
+           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dictum lacus 
+           quis ultricies placerat. Mauris commodo ligula sed feugiat pulvinar. Vestibulum rutrum mollis placerat. Quisque 
+           vulputate sed magna at suscipit. Proin at dui varius, fermentum ex at, vehicula eros. Curabitur dignissim gravida 
+           lorem, quis bibendum mi vestibulum eget.
+         </p>
+         <p class="mcParagraph">
+           <img class="mcImgLeft" src="img/square-img2.png" alt="">
+           Aliquam at semper ipsum. Cras vulputate commodo sagittis. Mauris commodo pellentesque nulla nec pretium. 
+           Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. 
+           Vivamus ligula neque, egestas quis egestas at, interdum a nisi. Proin eu placerat enim, at pharetra orci. 
+         
+           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dictum lacus 
+           quis ultricies placerat. Mauris commodo ligula sed feugiat pulvinar. Vestibulum rutrum mollis placerat. Quisque 
+           vulputate sed magna at suscipit. Proin at dui varius, fermentum ex at, vehicula eros. Curabitur dignissim gravida 
+           lorem, quis bibendum mi vestibulum eget.
+         
+         </p>
+         <p class="mcParagraph">
+           <img class="mcImgRight" src="img/square-img3.png" alt="">
+           Aliquam at semper ipsum. Cras vulputate commodo sagittis. Mauris commodo pellentesque nulla nec pretium. 
+           Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. 
+           Vivamus ligula neque, egestas quis egestas at, interdum a nisi. Proin eu placerat enim, at pharetra orci. 
+         
+           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dictum lacus 
+           quis ultricies placerat. Mauris commodo ligula sed feugiat pulvinar. Vestibulum rutrum mollis placerat. Quisque 
+           vulputate sed magna at suscipit. Proin at dui varius, fermentum ex at, vehicula eros. Curabitur dignissim gravida 
+           lorem, quis bibendum mi vestibulum eget.
+         
+         </p>
+         
+       </div>
+       <div class="gridSide" id="gridRight">
+         <p></p>
+       </div>
+       <!-- en liten footer med fotinfo-->
+       <div class="gridFoot">
+         <p class="footParagraph">
+           Synpunkter på sajten: <a href="mailto:webb@industribolaget42.se">Webbredaktionen</a><br>
+           Generella frågor: <a href="mailto:info@industribolaget42.se">Infomailen</a><br>
+           Besöksadress: Industrigatan 1, 111 11, Hittepåköping 
+         </p>
+       </div>
+     </div>
+     
+     <!-- verkar som att javascript inte hittar element deklararerade efter script taggen -->
+     <script src="js/easyRead.js"></script>
+     
+   </body>
+ </html>
