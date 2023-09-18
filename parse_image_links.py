@@ -13,4 +13,4 @@ with open("http://www.engelmark.org/index.html", mode="r", encoding="utf-8") as 
     html_content = html_file.read()
 
 parser = ImageParser()
-parser.feed(html_content) 
+parser.feed(html_content)
