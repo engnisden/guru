@@ -6,19 +6,76 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
-     <title>Industribolaget - sammhällets hållbara partner!</title>
+     <title>Katter?</title>
      
      <link rel="stylesheet" href="css/main.css" type="text/css">
+     <link rel="stylesheet" href="css/menu.css" type="text/css">
      <link rel="stylesheet" href="css/GridLayout.css" type="text/css">
-
+     <link rel="stylesheet" href="css/animate.css" type="text/css">
 
    </head>
+
+
    <body>
+    <header class="header">
+      <nav class="navbar">
+          <a href="#" class="nav-logo">WebDev.</a>
+          <ul class="nav-menu">
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Contact</a>
+              </li>
+          </ul>
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </nav>
+</header>
     <div>
+      <p>
+        <button onclick="myMove()">Click Me</button> 
+        </p>
+        
       <div>
-        <img src="assets/cat.png">
+        <img src="assets/char_1.png" width="128" height="128">
+        <img src="assets/char_2.png">
+        
       </div>
+
+        <div>
+          <img src="assets/char_1_128.png" id="myAnimation">
+        </div>
+
     </div>
      
+
+    <script>
+      var id = null;
+      function myMove() {
+        var elem = document.getElementById("myAnimation");   
+        var pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame() {
+          if (pos == 350) {
+            clearInterval(id);
+          } else {
+            pos++; 
+            elem.style.top = pos + 'px'; 
+            elem.style.left = pos + 'px'; 
+          }
+        }
+      }
+      </script>
    </body>
  </html>

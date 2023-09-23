@@ -1,4 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
 
 body {
 	font-family: Candara, Verdana, sans-serif;  
@@ -23,177 +35,9 @@ h1, h2, h3, h4, h5, h6	 {
 	font-weight: bold;
 	text-shadow: .05em .05em gray;
 }
+
 caption{
 	text-align: left;
 	font-weight: bold;
 }
-div{
-	border: 1px
-}
-img{
-	padding: 0.1em 0 0.1em 0;
-}
-input[type="button"]{
-	margin: 0;
-	padding: 0;
-	background-color: white;
-	border-radius: 5px;
-	padding: 0.1em;
-	margin: 0.1em;
-}
-/* 
-till menyn-fönstret här nedan
-*/
-.menuList{
-	padding: 0.5em 0.5em 0.5em;
-	margin: 0;
-}
-.menuList li{
-	display: inline;
-	list-style-type: none;
-}
-.menuList li a{
-	background-image: linear-gradient(180deg,#c7c7c7, #dbdbdb, white);
-	border: 1px solid black;
-	border-radius: 10px;
-	padding: 0.05em .2em 0.05em 0.2em;
-	margin: 1em 0 1em 0;
-	font-size: 1.5em;
-	float: none;
-	text-decoration: none;	
-	color: black;
-}
-.menuList li a:visited{
-	background-image: linear-gradient(90deg,#c7c7c7, #dbdbdb, white);
-}
-.menuList li a:hover{
-	background-image: linear-gradient(0deg,#c7c7c7, #dbdbdb, white);
-	box-shadow: 0 0 0 1px lime;
-	transition: all 0.7s ease-out;
-}
-.menuList li a #current{
-	border: 10px solid black
-}
-.menuGridContainer{
-	background-image: linear-gradient(270deg,#c7c7c7, #dbdbdb, white);
-	border-radius: 10px;
-	border: 1px solid hsl(50,50%,50%, 30%);
-	box-shadow: 1px 2px;
-}
-.menuGridTitle{
-	margin: 0 0 0 0.5em;
-	text-align: right;
-	padding: 0 1em;
-}
-.menuGridLinks{
-	margin: 0 0.5em 0 0;
-	text-align: left;
-}
-.titleImage{
-	padding: 0.7em 0.3em;
-}
-/*
-Accessability-rutan
-*/
-.accessability{
-	margin: 0.1em;
-}
-.easyRead{
-	font-size: 1.3em;
-	background-image: linear-gradient(white, silver);
-	border: 3px solid black;
-}
-.easyRead:hover{
-	font-size: 1.3em;
-	background-image: linear-gradient(180deg, silver, white);
-	box-shadow: 0 0 0 5px red;
-	transition: all 0.2s ease-out;
-}
-/*
-Till fotnoten, eller footer
-*/
-.gridFoot{
-	background-color: white;
-	border: 1px solid black;
-	box-shadow: 1px 2px;
-	border-radius: 10px;
-}
-.gridFoot{
-	text-align: left;
-}
-/*
-Överflödigt efter att headerbilden tagits bort. Sparas för ev. framtida bruk.
-.headerImage{
-	border: 1px solid hsl(50,50%,50%, 30%);
-	box-shadow: 1px 2px;
-}
-*/
 
-/*
-Main content nedan
-*/
-.gridCenter{
-	background-color: hsl(100,100%,100%, 90%);
-	margin: 1em 2em 1em 2em; 
-	padding: 0 2em 0 2em;
-	border-left: 1px dashed black;
-	border-right: 1px dashed black;
-	
-}
-.gridCenter p{
-	text-align: left;
-	line-height: 1.3em;
-}
-/*
-mc tänkte jag skulle förkorta main content för övrigt så kanske det blir mer logiskt att läsa. Växlar 
-här med hjälp av float left och right för att få schackrutelayout
-
-*/
-.mcParagraph{
-	text-align: left;
-}
-.mcImgRight{
-	float:right;
-	padding: 0.5em 1em 2.5em 1em;
-	height: 128px;
-	width: 128px;
-}
-.mcImgLeft{
-	float: left;
-	padding: 0.5em 1em 2.5em 1em;
-	height: 128px;
-	width: 128px;
-}
-/*
-För att visa vilken del av webplatsen som är aktiv utan att stjäla för mycket uppmärksamhet
-*/
-#current{
-	border: 1px solid lime;
-	box-shadow: 1px 2px;
-}
-.form{
-	text-align: left;
-}
-/*
-Nytt:
-	För att imitera header-bilden med html och även tydligöra med hjälp av hover att det är en länk.
-*/
-
-.gridHead{
-	background-image: linear-gradient(270deg,#c7c7c7, #dbdbdb, white);
-	margin: 1em;
-	border-radius: 10px;
-	border: 1px solid hsl(50,50%,50%, 30%);
-	box-shadow: 1px 2px;
-}
-.gridHead h2{
-	color: black;
-	text-align: center;
-	text-shadow: 1px 2px #ffffff;
-}
-.gridHead h2:hover{
-	color: green;
-}
-.gridHead a{
-	text-decoration: none;
-}
