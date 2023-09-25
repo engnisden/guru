@@ -1,0 +1,32 @@
+     <link rel="stylesheet" href="css/main.css" type="text/css">
+     <link rel="stylesheet" href="css/menu.css" type="text/css">
+     <link rel="stylesheet" href="css/image.css" type="text/css">
+     <link rel="stylesheet" href="css/animate.css" type="text/css">
+	
+
+var id = null;
+      function myMove() {
+        var elem = document.getElementById("imageObject");
+        var posX= getPosition(elem).x;
+        var posY= getPosition(elem).y;
+        var oldX = posX;
+        var oldY = posY;
+        var xGoal = posX + 35;
+        var pos = 0;
+        
+        document.getElementById('char').style.backgroundImage="url(assets/char_1_128_ed2.png)";
+
+function saver(){
+        function frame() {
+          if (posX == xGoal) {
+            clearInterval(id);
+            document.getElementById('char').style.backgroundImage="url(assets/char_1_128_ed2.png)";
+            elem.style.top =  oldY - 2+ 'px';
+            elem.style.left = oldX + 'px';
+          } else {
+            posX++; 
+            elem.style.top = posY + 'px';
+            elem.style.left = posX + 'px'; 
+          }
+        }
+      }

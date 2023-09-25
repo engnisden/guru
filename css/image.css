@@ -1,0 +1,47 @@
+#playerObject {
+  min-width: 128px;
+  min-height: 128px;
+  /*border: 3px solid black;*/
+}
+#playerChar {
+  background-image: url(../assets/char_1_128_ed2.png);
+
+  min-height: 128px;
+  /*border: 3px solid purple;*/
+}
+#playerItem {
+  background-image: url(../assets/w_sw_1.png);
+  background-size: contain;
+  position: relative;
+  left: 64px;
+  top: 24px;
+  height: 64px;
+  width: 64px;
+  /*border: 3px solid green;*/
+}
+#enemyObject {
+  min-width: 128px;
+  min-height: 128px;
+  /*border: 3px solid black;*/
+}
+#enemyChar {
+  background-image: url(../assets/char_1_128_ed2.png);
+  background-size: cover;
+  min-height: 128px;
+  /*border: 3px solid purple;*/
+}
+#enemyItem {
+  background-image: url(../assets/w_sw_1.png);
+  background-size: contain;
+  position: relative;
+  left: 64px;
+  top: 24px;
+  height: 64px;
+  width: 64px;
+  /*border: 3px solid green;*/
+}
+
+.gridEvent {
+  background: linear-gradient(#e66465, #9198e5);
+  /*border: 15px;*/
+}

@@ -1,194 +1,52 @@
 /*
 Grid layout här och mestadels layout-relaterade attribut och värden.
 */
-
-.gridHead{
-	grid-area: header;
-}
-.invisibile{
-	grid-area: header-left;
-
-}
-.accessability{
-	grid-area: header-right;
-
-}
-.menuGridContainer{
-	grid-area: menu;
-}
-.gridSide{
-	
-}
-#gridLeft{
-	grid-area: left;
-}
-.gridCenter{
-	grid-area: main
-}
-#gridRight{
-	grid-area: right;
-}
-.gridFoot{
-	grid-area: foot;
-}
-.gridContainer{
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-template-areas:
-		'invisible header header header header-right'
-		'left menu menu menu right'
-		'left main main main right'
-		'left foot foot foot right';
-		gap: 0em;
-		justify-content: space-between;
-		grid-template-columns: 10% 10% 60% 10% 10%;
-}
-.menuGridTitle{
-	grid-area: title;
-}
-.menuGridLinks{
-	grid-area: links;
-}
-.menuGridContainer{
-		margin: 0;
-		padding: 0;
-		display: grid;
-		grid-template-areas: 'title links links';
-		grid-template-columns: 18% 42% 40%;
-		gap: 0em;
-		justify-content: space-between;
-}
-.menuList{
-		display: grid;
-		grid-template-areas: 'link1 link2 '
-		'link3 link4';
-		justify-content: space-evenly;
-		margin-top: 0.8em;
+div,
+span {
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
-/*
-Separerar olika vyer med portrait och landscape endast. 
-Ändrar layouten för portrait mode för att fylla ut mycket i kanterna och ge innehållet mer plats på viewporten
-portrait:
-*/
-
-@media only screen and (orientation: portrait){
-	.menuList{
-		display: grid;
-		grid-template-areas: 'link1 link2 '
-		'link3 link4';
-		justify-content: space-evenly;
-		gap: 0.4em;
-		margin: 0.3em;
-		padding: 0;
-	}
-	.menuList li a{
-		font-size: 2em; 
-		margin: 0.3em;
-		padding: 0 0.1em 0 0.1em;
-
-	}
-	.menuGridTitle{
-		margin: 0;
-		padding: 0;
-		text-align: left;
-	}
-	.gridContainer{
-		grid-template-areas:
-		'header header header header-right header-right'
-		'menu menu menu menu menu'
-		'main main main main main'
-		'foot foot foot foot foot';
-	}
-	.gridCenter{
-		padding: 0 2em 5em 2em;
-		margin: 1em 5% 1em 5%;
-	}
-	.gridFoot{
-		padding: 0 2em 0 2em;
-		margin: 1em 5% 1em 5%;
-	}
-	.accessability{
-		
-	}
-	.mcImg{
-		padding: 0.5em 0.5em 1em 0.5em;
-	}
-	.mcImgLeft{
-		padding: 0.5em 0.5em 1em 0.5em;
-		width: 96px;
-		height: 96px;
-	}
-	#coverLetter{
-		width: 100%;
-		height: 20em;
-	}
+.gridContainer {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "event event event"
+    "footer footer footer";
+  grid-template-rows: 80px 1fr 128px 70px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  border: 3px solid green;
 }
-/* 
-Landskapsorientering
-Vice versa för denna media-query, ger alltså mer luft, avstånd mellan element
-*/
-@media only screen and (orientation: landscape) {
-	.menuList{
-		display: grid;
-		grid-template-areas: 'link1 link2 link3 link4';
-		justify-content: start;
-		align-content: center;
-		gap: 0.5em;
-	}
-	.menuList li a{
-		font-size: 1.6em;
-	}
-	.gridCenter{
-		padding: 0 5em 5em 5em;
-		margin: 1em 10% 1em 10%;
-	}
-	.gridFoot{
-		padding: 0 5em 0 5em;
-		margin: 1em 10% 1em 10%;
-	}
-	#coverLetter{
-		width: 100%;
-		height: 20em;
-	}
-
+.gridTop {
+  grid-area: header;
 }
-/*
-Fortsättning på förgående med skillnaden att texten blir lite större för att synas ordentligt i högre upplösningar
-*/
-@media only screen and (orientation: landscape) and (min-width: 1500px){
-	.menuList li a{
-		font-size: 2em;
-	}
-	.gridCenter{
-		padding: 0 5em 5em 5em;
-		margin: 1em 21% 1em 21%;
-	}
-	.gridFoot{
-		padding: 0 5em 0 5em;
-		margin: 1em 21% 1em 21%;
-	}
-	#coverLetter{
-		width: 100%;
-		height: 20em;
-	}
+.gridMain {
+  grid-area: main;
 }
-
-/*For debugging*/
-@media only screen and (orientation: portrait){
-	.orientationPortrait{
-		color: black;
-	}
-	.orientationLandscape{
-		color: white;
-	}
+.gridEvent {
+  grid-area: event;
+  background-color: green;
 }
-@media only screen and (orientation: landscape){
-	.orientationPortrait{
-		color: white;
-	}
-	.orientationLandscape{
-		color: black;
-	}
+.gridBot {
+  grid-area: footer;
+}
+.gridLeft {
+  grid-area: left;
+}
+.gridRight {
+  grid-area: right;
+}
+.gridEvent {
+  display: flex;
+  justify-content: space-evenly;
+}
+.gridEvent > div {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 2px solid yellow;
 }
