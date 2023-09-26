@@ -3,8 +3,8 @@ Grid layout här och mestadels layout-relaterade attribut och värden.
 */
 div,
 span {
-  border: 1px solid black;
-  border-radius: 5px;
+  border: 0px solid black;
+  border-radius: 15px;
 }
 
 .gridContainer {
@@ -17,16 +17,19 @@ span {
   grid-template-rows: 80px 1fr 128px 70px;
   grid-template-columns: 20% 1fr 15%;
   grid-row-gap: 10px;
-  grid-column-gap: 10px;
+  justify-content: end;
   height: 100vh;
-  margin: 0;
-  border: 3px solid green;
+  margin: 10px;
+  /*border: 3px solid green;*/
 }
 .gridTop {
   grid-area: header;
 }
 .gridMain {
   grid-area: main;
+  background-color: white;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black;
 }
 .gridEvent {
   grid-area: event;
@@ -46,7 +49,5 @@ span {
   justify-content: space-evenly;
 }
 .gridEvent > div {
-  background-color: #f1f1f1;
-  padding: 10px;
-  border: 2px solid yellow;
+  border: 1px solid black;
 }

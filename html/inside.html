@@ -49,9 +49,38 @@
 
     <div class="gridRight"></div>
 
-    <footer class="gridBot"></footer>
+    <div class="gridEvent">
+      <div>left</div>
+      <div id="playerObject">
+        <div id="playerChar">
+          <div id="playerItem"></div>
+        </div>
+      </div>
+      <div>mid</div>
+      <div id="enemyObject">
+        <div id="enemyChar">
+          <div id="enemyItem"></div>
+        </div>
+      </div>
+      <div>right</div>
+    </div>
 
+    <footer class="gridBot"></footer>
     <script>
+      var box = document.querySelector("#playerObject");
+      var btn = document.querySelector(".theButton");
+      btn.addEventListener("click", () => {
+        animate();
+      });
+
+      function animate() {
+        box.style.transform = "translateX(35px)";
+        box.style.transition = "transform 0.1s ease-in-out";
+        setTimeout(function () {
+          box.style.transform = "translateX(0px)";
+        }, 100);
+      }
+
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
 

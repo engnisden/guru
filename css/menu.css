@@ -93,4 +93,11 @@ https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-usi
     display: block;
     cursor: pointer;
   }
+  .gridContainer {
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "event event event"
+      "footer footer footer";
+  }
 }
