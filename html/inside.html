@@ -16,7 +16,7 @@
   <body class="gridContainer">
     <header class="gridTop">
       <nav class="navbar">
-        <a href="#" class="nav-logo">WebDev.</a>
+        <a href="#" class="nav-logo">Projekt Guru</a>
         <ul class="nav-menu">
           <li class="nav-item">
             <a href="#" class="nav-link">Services</a>
@@ -50,35 +50,67 @@
     <div class="gridRight"></div>
 
     <div class="gridEvent">
-      <div>left</div>
-      <div id="playerObject">
-        <div id="playerChar">
-          <div id="playerItem"></div>
+      <div class="eventLeft"></div>
+      <div class="eventMid">
+        <div class="debug-text">left</div>
+        <div class="characterObject">
+          <div class="characterSub" id="companionTwoObject"></div>
         </div>
-      </div>
-      <div>mid</div>
-      <div id="enemyObject">
-        <div id="enemyChar">
-          <div id="enemyItem"></div>
+        <div class="characterObject">
+          <div class="characterSub" id="companionOneObject"></div>
         </div>
+        <div class="characterObject">
+          <div class="characterSub" id="playerChar"></div>
+        </div>
+        <div class="debug-text">mid</div>
+        <div class="characterObject">
+          <div class="characterSub" id="enemyChar"></div>
+        </div>
+        <div class="debug-text">right</div>
       </div>
-      <div>right</div>
+
+      <div class="eventRight"></div>
     </div>
 
     <footer class="gridBot"></footer>
     <script>
-      var box = document.querySelector("#playerObject");
+      var player = document.querySelector("#playerChar");
+      var comp1 = document.querySelector("#companionOneObject");
+      var comp2 = document.querySelector("#companionTwoObject");
       var btn = document.querySelector(".theButton");
       btn.addEventListener("click", () => {
         animate();
       });
 
       function animate() {
-        box.style.transform = "translateX(35px)";
-        box.style.transition = "transform 0.1s ease-in-out";
         setTimeout(function () {
-          box.style.transform = "translateX(0px)";
+          player.style.transform = "translateX(35px)";
+          player.style.transition = "transform 0.1s ease-in-out";
+          player.style.backgroundImage = "url(../assets/char_2/w1.png)";
+        }, 10);
+
+        setTimeout(function () {
+          comp1.style.transform = "translateX(35px)";
+          comp1.style.transition = "transform 0.1s ease-in-out";
         }, 100);
+
+        setTimeout(function () {
+          comp2.style.transform = "translateX(35px)";
+          comp2.style.transition = "transform 0.1s ease-in-out";
+        }, 200);
+
+        setTimeout(function () {
+          player.style.transform = "translateX(0px)";
+          player.style.backgroundImage = "url(../assets/char_2/anim_walk.gif)";
+        }, 100);
+
+        setTimeout(function () {
+          comp1.style.transform = "translateX(0px)";
+        }, 200);
+
+        setTimeout(function () {
+          comp2.style.transform = "translateX(0px)";
+        }, 300);
       }
 
       const hamburger = document.querySelector(".hamburger");
