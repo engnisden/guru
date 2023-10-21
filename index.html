@@ -44,7 +44,22 @@
     <main class="gridMain">
       <p>Some info will be shown here as well as the login button</p>
       <form action="html/inside.html">
-        <input type="submit" value="Logga in" />
+        <input type="submit" value="testa animationer" />
+      </form>
+      <div><h3>Logga in</h3></div>
+
+      <form class="form-group" action="signin.php" method="post">
+        <label>Username</label>
+        <input type="text" name="user_name" class="form-control" />
+        <label>Password</label>
+        <input type="password" name="pass" class="form-control" />
+        <button class="btn btn-block btn-success mt-2" name="login">
+          Login
+        </button>
+        <p class="mt-2 text-center">
+          Already registered? <a href="index.php">Click here</a> to Create
+          Account
+        </p>
       </form>
     </main>
 

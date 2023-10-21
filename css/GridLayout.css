@@ -45,6 +45,3 @@ span {
 .gridRight {
   grid-area: right;
 }
-.debug-test {
-  visibility: hidden;
-}
