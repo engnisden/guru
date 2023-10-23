@@ -39,7 +39,9 @@ if (mysqli_connect_errno()) {
                 echo 'starting statement';
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                echo 'hashing';
                 $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
+                echo 'binding';
                 $stmt->execute();
                 echo 'You have successfully registered! You can now login!';
             } else {
