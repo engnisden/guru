@@ -1,6 +1,9 @@
 <?php
-echo "hej där";
-//require '../../secredret.php';
+
+//echo "hej där";
+
+
+require '../../secredret.php';
 
 /*
 session_start();
