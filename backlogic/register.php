@@ -35,10 +35,8 @@ if (mysqli_connect_errno()) {
             // Username already exists
             echo 'Username exists, please choose another!';
         } else {
-            echo 'hejsan';
-
-
             if ($stmt = $con->prepare('INSERT INTO users (name, password, email) VALUES (?, ?, ?)')) {
+                echo 'starting statement';
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
