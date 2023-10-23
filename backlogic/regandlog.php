@@ -23,7 +23,8 @@ if (mysqli_connect_errno()) {
         // Could not get the data that should have been sent.
         exit('Please fill both the username and password fields!');
     }
-if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) {
+
+if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
