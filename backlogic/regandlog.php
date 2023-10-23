@@ -1,10 +1,12 @@
 <?php
 
-//echo "hej där";
+
 
 
 require '../../secredret.php';
 
+
+echo "hej där";
 /*
 session_start();
 
