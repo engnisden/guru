@@ -15,16 +15,14 @@ if (mysqli_connect_errno()) {
     //print 'Det blev inge bra';
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 
-} else {
-    print "databaskoppling fungerade";
-}
+} else
 
 
 
-if (!isset($_POST['username'], $_POST['password'])) {
-    // Could not get the data that should have been sent.
-    exit('Please fill both the username and password fields!');
-}
+    if (!isset($_POST['username'], $_POST['password'])) {
+        // Could not get the data that should have been sent.
+        exit('Please fill both the username and password fields!');
+    }
 if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['username']);
@@ -47,11 +45,11 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
             echo 'Welcome ' . $_SESSION['name'] . '!';
         } else {
             // Incorrect password
-            echo 'Incorrect username and/or password!';
+            echo 'Incorrect username or password! Perhaps both! IDK i am script';
         }
     } else {
         // Incorrect username
-        echo 'Incorrect username and/or password!';
+        echo 'Incorrect username or password! Perhaps both! IDK i am script';
     }
 
     $stmt->close();
