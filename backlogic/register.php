@@ -24,6 +24,7 @@ if (mysqli_connect_errno()) {
         // One or more values are empty.
         exit('Please complete the registration form');
     }
+    /*
     if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
         $stmt->bind_param('s', $_POST['username']);
@@ -50,7 +51,7 @@ if (mysqli_connect_errno()) {
         // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
         echo 'Could not prepare statement!';
     }
-    $con->close();
+    $con->close();*/
 }
 
 
