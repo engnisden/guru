@@ -9,7 +9,7 @@ require '../../secredret.php';
 
 
 
-
+/*
 session_start();
 
 
@@ -18,6 +18,7 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 
 }
+*/
 /*
 if (!isset($_POST['username'], $_POST['password'])) {
     // Could not get the data that should have been sent.
@@ -26,5 +27,5 @@ if (!isset($_POST['username'], $_POST['password'])) {
     echo "Tjena mannen";
 }
 */
-
-?>
+echo "THej där"
+    ?>
