@@ -36,7 +36,7 @@ if (mysqli_connect_errno()) {
             echo 'Username exists, please choose another!';
         } else {
             echo 'hejsan';
-            /* 
+
 
             if ($stmt = $con->prepare('INSERT INTO users (name, password, email) VALUES (?, ?, ?)')) {
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
@@ -48,7 +48,7 @@ if (mysqli_connect_errno()) {
                 // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
                 echo 'Could not prepare statement!';
             }
-        */}
+        }
         $stmt->close();
     } else {
         // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
