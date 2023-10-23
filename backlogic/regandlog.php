@@ -6,10 +6,6 @@
 require '../../secredret.php';
 
 
-
-echo $DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME;
-
-
 //session_start();
 
 
