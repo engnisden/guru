@@ -6,7 +6,7 @@
 require '../../secredret.php';
 
 
-echo "hej där";
+
 
 
 
@@ -21,6 +21,8 @@ if (mysqli_connect_errno()) {
 if (!isset($_POST['username'], $_POST['password'])) {
     // Could not get the data that should have been sent.
     exit('Please fill both the username and password fields!');
+} else {
+    echo "Tjena mannen";
 }
 
 ?>
