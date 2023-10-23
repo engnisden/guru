@@ -8,15 +8,8 @@ require '../../secredret.php';
 
 session_start();
 
-$conn = new mysqli($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-echo "Connected successfully";
 
-/*
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
     //print 'Det blev inge bra';
@@ -25,13 +18,13 @@ if (mysqli_connect_errno()) {
 } else {
     print "databaskoppling fungerade";
 }
-*/
 
-/*
+
+
 if (!isset($_POST['username'], $_POST['password'])) {
     // Could not get the data that should have been sent.
     exit('Please fill both the username and password fields!');
-} 
+}
 if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) {
     // Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
     $stmt->bind_param('s', $_POST['username']);
@@ -43,6 +36,6 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
     $stmt->close();
 }
 
-*/
+
 echo "Filen öppnas"
     ?>
