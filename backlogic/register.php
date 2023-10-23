@@ -24,7 +24,7 @@ if (mysqli_connect_errno()) {
         // One or more values are empty.
         exit('Please complete the registration form');
     }
-    /*
+
     if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
         $stmt->bind_param('s', $_POST['username']);
@@ -34,24 +34,25 @@ if (mysqli_connect_errno()) {
         if ($stmt->num_rows > 0) {
             // Username already exists
             echo 'Username exists, please choose another!';
-        } else {
-            if ($stmt = $con->prepare('INSERT INTO users (name, password, email) VALUES (?, ?, ?)')) {
-                // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
-                $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
-                $stmt->execute();
-                echo 'You have successfully registered! You can now login!';
-            } else {
-                // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
-                echo 'Could not prepare statement!';
-            }
-        }
-        $stmt->close();
+        } else
+            /*{
+                if ($stmt = $con->prepare('INSERT INTO users (name, password, email) VALUES (?, ?, ?)')) {
+                    // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
+                    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+                    $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
+                    $stmt->execute();
+                    echo 'You have successfully registered! You can now login!';
+                } else {
+                    // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
+                    echo 'Could not prepare statement!';
+                }
+            }*/
+            $stmt->close();
     } else {
         // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
         echo 'Could not prepare statement!';
     }
-    $con->close();*/
+    $con->close();
 }
 
 
