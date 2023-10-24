@@ -6,7 +6,7 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: index.html');
     exit;
 } else {
-    header('Location: html/inside.html');
+    header('Location: ../html/inside.html');
     exit;
 }
 ?>
