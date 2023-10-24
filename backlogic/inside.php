@@ -9,4 +9,5 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: ../html/inside.html');
     exit;
 }
+
 ?>

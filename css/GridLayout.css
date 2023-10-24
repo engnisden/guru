@@ -31,10 +31,8 @@ span {
   border-left: 1px dotted black;
   border-right: 1px dotted black;
 }
-.gridEvent {
+.gridEvent-Main {
   grid-area: event;
-  display: flex;
-  justify-content: space-between;
 }
 .gridBot {
   grid-area: footer;

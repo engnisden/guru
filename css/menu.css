@@ -97,7 +97,6 @@ https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-usi
     grid-template-areas:
       "header header header"
       "main main main"
-      "event event event"
-      "footer footer footer";
+      "event event event";
   }
 }
