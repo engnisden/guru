@@ -81,3 +81,46 @@
     background-position: 0 0;
   }
 }
+.createPlayerForm img {
+  max-width: 32px;
+  display: inline-flex;
+}
+.Radio {
+  display: inline-flex;
+  align-items: center;
+}
+
+.Radio--large {
+  font-size: 2em;
+}
+
+.Radio-Input {
+  margin: 0 0.5em 0;
+}
+.radioMainCont {
+  display: flex;
+  justify-content: center;
+}
+.radioCont {
+  height: 64px;
+  border: 1px solid black;
+}
+.radioCont div {
+  justify-content: center;
+  vertical-align: center;
+  display: flex;
+}
+#radio1 {
+  background-image: url(../assets/char_2/tp.png);
+}
+#radio2 {
+  background-image: url(../assets/char_3/tp.png);
+}
+#radio3 {
+  background-image: url(../assets/char_4/tp.png);
+}
+.radioImage {
+  min-height: 64px;
+  min-width: 64px;
+  background-size: cover;
+}
