@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-10-24T08:30:42.752Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="LEyi5hi68iGG7ln9kf2p" version="22.0.6" type="device">
+<mxfile host="app.diagrams.net" modified="2023-10-24T12:30:16.242Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="dYYBVWILL3_uNLWP7dfy" version="22.0.6" type="device">
   <diagram name="Sida-1" id="4l9KCM2jKAf7eEutduYE">
-    <mxGraphModel dx="1434" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1687" dy="892" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,14 +13,50 @@
         <mxCell id="Bg4gMgGmsj-aOFyBJUg--3" value="id&lt;br&gt;username&lt;br&gt;password&lt;br&gt;email" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="70" y="130" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="Bg4gMgGmsj-aOFyBJUg--4" value="id&lt;br&gt;money&lt;br&gt;iteration exp&lt;br&gt;clan/cult exp&lt;br&gt;iterations&lt;br&gt;team id" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--4" value="id&lt;br&gt;money&lt;br&gt;iteration exp&lt;br&gt;iterations&lt;br&gt;team id&lt;br&gt;clan id" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="250" y="130" width="120" height="100" as="geometry" />
         </mxCell>
         <mxCell id="Bg4gMgGmsj-aOFyBJUg--5" value="Teams" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="90" width="120" height="40" as="geometry" />
+          <mxGeometry x="410" y="90" width="160" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="Bg4gMgGmsj-aOFyBJUg--6" value="id&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="130" width="120" height="100" as="geometry" />
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--6" value="name&lt;br&gt;team id&lt;br&gt;team exp&lt;br&gt;leader character id&lt;br&gt;other team var" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="410" y="130" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--7" value="Characters" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="90" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--8" value="name&lt;br&gt;race&lt;br&gt;team id&lt;br&gt;player id&lt;br&gt;str / exp&lt;br&gt;def / exp&lt;br&gt;hp / exp" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="130" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--9" value="Clans" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--10" value="nam&lt;br&gt;id&lt;br&gt;money&lt;br&gt;clan exp&lt;br&gt;alliance id" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="340" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--11" value="Alliances" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="470" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--12" value="name&lt;br&gt;id&lt;br&gt;exp&lt;br&gt;money" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="510" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--13" value="Country" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="650" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--14" value="name&lt;br&gt;id&lt;br&gt;exp&lt;br&gt;money" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="690" width="120" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--15" value="Skills" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--16" value="name&lt;br&gt;id&lt;br&gt;type&lt;br&gt;power&lt;br&gt;element" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="360" width="120" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--17" value="Character skill" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="320" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Bg4gMgGmsj-aOFyBJUg--18" value="character id&lt;br&gt;skill id&lt;br&gt;skill exp&lt;br&gt;skill tier" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="120" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

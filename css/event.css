@@ -9,7 +9,7 @@
   height: 100%;
   width: 100%;
   z-index: 0;
-  animation: animatedBackground 40s linear infinite;
+  animation: animatedBackground 30s linear infinite;
 }
 .gridEvent-content {
   display: grid;
