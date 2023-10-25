@@ -4,6 +4,7 @@ require '../../secredret.php';
 
 session_start();
 
+echo '' + $_POST['country'] + ' ' + $_POST['charname'] + ' ' + $_POST['avatar'];
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
@@ -12,12 +13,12 @@ if (mysqli_connect_errno()) {
 
     if (!isset($_POST['charname'], $_POST['avatar'], $_POST['country'])) {
         // Could not get the data that should have been sent.
-        exit('Please complete the registration form!');
+        exit('Please complete the create player form!');
     }
     // Make sure the submitted registration values are not empty.
     if (empty($_POST['charname']) || empty($_POST['avatar'] || empty($_POST['country']))) {
         // One or more values are empty.
-        exit('Please complete the registration form ');
+        exit('Please complete the create player form!');
     }
 
     if ($stmt = $con->prepare('SELECT id FROM players WHERE name = ?')) {
