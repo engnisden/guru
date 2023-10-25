@@ -3,7 +3,6 @@
 require '../../secredret.php';
 
 session_start();
-echo 'hello';
 
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
@@ -22,6 +21,7 @@ if (mysqli_connect_errno()) {
     }
 
     if ($stmt = $con->prepare('SELECT id FROM players WHERE name = ?')) {
+        echo 'Börjar preppa sqlen';
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
         $stmt->bind_param('s', $_POST['charname']);
         $stmt->execute();
