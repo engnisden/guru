@@ -8,11 +8,10 @@
   grid-template-rows: 10% 1fr 10%;
   grid-template-columns: 20% 1fr 25%;
   grid-row-gap: 10px;
-  margin: 10px;
 }
 .gridMain div {
   /*for debugging*/
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 .mgHeader {
   grid-area: header;
@@ -66,18 +65,53 @@
 .mgmFoot {
   grid-area: footer;
 }
+.mgmLinksContent {
+  display: grid;
+  grid-template-areas: "left right";
+  justify-content: space-around;
+  margin: 3px;
+  padding: 5px;
+}
+.mgmLinksTitle,
+.menuLinkBox {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.562),
+    #a7ffff9a
+  );
+  border: 1px solid black;
+}
+.menuLinkBox {
+  grid-area: left;
+  padding: 5px;
+  margin: 3px;
+}
+
+.mgmProfile,
+.mgmStats1,
+.mgmStats2 {
+  font-size: 0.7em;
+}
+.mgmProfileName {
+  font-weight: 600;
+}
+.mgmProfileImg {
+  background-image: url(../assets/char_1/p.png);
+  height: 64px;
+}
 
 .createPlayerCont {
   position: absolute;
   z-index: 1;
-  border: 1px solid black;
-  box-shadow: 5px 2px 2px silver;
+  box-shadow: 5px 2px 2px rgba(155, 155, 155, 0.572);
   background-image: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.562),
     #a7ffff9a
   );
   visibility: visible;
+  margin: 5px;
+  padding: 5px;
 }
 .createPlayerForm img {
   max-width: 32px;
@@ -125,7 +159,4 @@
   min-height: 64px;
   min-width: 64px;
   background-size: cover;
-}
-.gridMain div {
-  padding: 10px;
 }
