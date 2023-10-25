@@ -5,7 +5,7 @@ require '../../secredret.php';
 session_start();
 
 echo 'testar: ';
-echo $_POST['avatar'];
+echo $_POST['avatar'], $_POST['country'], ' ', $_POST['charname'], ' ';
 
 /*
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
