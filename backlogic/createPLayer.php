@@ -29,7 +29,7 @@ if (mysqli_connect_errno()) {
         // Store the result so we can check if the account exists in the database.
         if ($stmt->num_rows > 0) {
             // Username already exists
-            echo 'Character name exists, please choose anoter!';
+            echo 'Character name exists, please choose another!';
         } else {
             if ($stmt = $con->prepare('INSERT INTO players (charname, countryId, avatar) VALUES (?, ?, ?)')) {
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
