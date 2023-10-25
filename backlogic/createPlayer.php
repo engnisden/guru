@@ -22,8 +22,8 @@ if (mysqli_connect_errno()) {
         // One or more values are empty.
         exit('Please complete the create player form!');
     }
-
-    if ($stmt = $con->prepare('SELECT id FROM players WHERE name = ?')) {
+    echo 'Försöker börja preppa sqlen';
+    if ($stmt = $con->prepare('SELECT playerId FROM players WHERE charname = ?')) {
         echo 'Börjar preppa sqlen';
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
         $stmt->bind_param('s', $_POST['charname']);
