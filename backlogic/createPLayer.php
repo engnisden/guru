@@ -18,7 +18,7 @@ if (mysqli_connect_errno()) {
     // Make sure the submitted registration values are not empty.
     if (empty($_POST['charname']) || empty($_POST['avatar'] || empty($_POST['country']))) {
         // One or more values are empty.
-        exit('Please complete the registration form');
+        exit('Please complete the registration form ');
     }
 
     if ($stmt = $con->prepare('SELECT id FROM players WHERE name = ?')) {
