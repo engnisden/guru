@@ -33,18 +33,19 @@ if (mysqli_connect_errno()) {
     }
     if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
         exit('Password must be between 5 and 20 characters long!');
-    }
-    echo 'hhejk';
-    if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
-        // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
-        $stmt->bind_param('s', $_POST['username']);
-        $stmt->execute();
-        $stmt->store_result();
-        // Store the result so we can check if the account exists in the database.
-        if ($stmt->num_rows > 0) {
-            // Username already exists
-            echo 'Username exists, please choose another!';
-        } else {
+
+        if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
+            // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
+            $stmt->bind_param('s', $_POST['username']);
+            $stmt->execute();
+            $stmt->store_result();
+            // Store the result so we can check if the account exists in the database.
+            if ($stmt->num_rows > 0) {
+                // Username already exists
+                echo 'Username exists, please choose another!';
+            } else {
+            }
+            echo 'trying to insert';
             if ($stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
