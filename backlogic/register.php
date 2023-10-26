@@ -52,7 +52,7 @@ if (mysqli_connect_errno()) {
                 $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email'], $uniqid);
                 $stmt->execute();
 
-                $from = 'noreply@yourdomain.com';
+                $from = 'noreply@engelmark.org';
                 $subject = 'Account Activation Required';
                 $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
                 // Update the activation variable below
