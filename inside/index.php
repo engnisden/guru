@@ -28,10 +28,10 @@ echo $page;
       <a href="inside.html" class="nav-logo">Projekt Guru</a>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="page=start" class="nav-link">start</a>
+          <a href="?page=start" class="nav-link">start</a>
         </li>
         <li class="nav-item">
-          <a href="page=newchar" class="nav-link">newchar</a>
+          <a href="?page=newchar" class="nav-link">newchar</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">About</a>
