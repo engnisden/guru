@@ -53,7 +53,7 @@ echo $page;
   <?php
   switch ($page) {
     case 'start':
-      require 'newchar.php';
+      require 'start.php';
       break;
     case 'newchar':
       require 'newchar.php';
