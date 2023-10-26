@@ -34,17 +34,30 @@ if (mysqli_connect_errno()) {
     if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
         exit('Password must be between 5 and 20 characters long!');
     }
-    if ($stmt = $con->prepare('SELECT id FROM users WHERE name = ? OR email = ?')) {
+    if ($stmt = $con->prepare('SELECT id FROM users WHERE name = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
-        $stmt->bind_param('ss', $_POST['username'], $_POST['email']);
+        $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();
         $stmt->store_result();
         // Store the result so we can check if the account exists in the database.
         if ($stmt->num_rows > 0) {
             // Username already exists
-            echo 'Username exists, please choose another!';
+            exit('Username exists, please choose another!');
         }
-
+    } else {
+        // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
+        echo 'Could not prepare statement!';
+    }
+    if ($stmt = $con->prepare('SELECT id FROM users WHERE email = ?')) {
+        // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
+        $stmt->bind_param('s', $_POST['email']);
+        $stmt->execute();
+        $stmt->store_result();
+        // Store the result so we can check if the account exists in the database.
+        if ($stmt->num_rows > 0) {
+            // Username already exists
+            exit('Email exists, please choose another!');
+        }
 
         if ($stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
             // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
@@ -72,7 +85,6 @@ if (mysqli_connect_errno()) {
     } else {
         // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
         echo 'Could not prepare statement!';
-        echo "Prepare failed: (" . $con->errno . ") " . $con->error;
     }
     $con->close();
 }
