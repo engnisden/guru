@@ -71,7 +71,7 @@ echo $page;
 
   <?php
   if (true) {
-    require('event.php');
+    require('eventbar.php');
   }
 
   ?>
