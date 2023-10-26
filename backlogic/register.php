@@ -70,6 +70,7 @@ if (mysqli_connect_errno()) {
             } else {
                 // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
                 echo 'Could not prepare statement!';
+                echo "Prepare failed: (" . $con->errno . ") " . $con->error;
             }
         }
         $stmt->close();
