@@ -1,5 +1,5 @@
 <?PHP
-$sender = 'someone@somedomain.tld';
+$sender = 'noreply0@engelmark.org';
 $recipient = 'info@engelmark.org';
 
 $subject = "php mail test";
