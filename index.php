@@ -10,9 +10,7 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
   //is user logged in?
 
 }
-echo 'Kollar sessionen';
 if ($_SESSION['loggedIn']) {
-  echo 'ja du är inloggad ';
   header('Location: view/');
 }
 
