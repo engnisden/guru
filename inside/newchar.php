@@ -1,5 +1,10 @@
+<?php
+$userName = $_SESSION['userName'];
+?>
 <div class="createPlayerCont">
-    <h3>Welcome $namn</h3>
+    <h3>Welcome
+        <?php print $userName; ?>
+    </h3>
     <p>Name your character</p>
     <form class="createPlayerForm" action="../backlogic/createPlayer.php" method="post" autocomplete="off">
         <label for="charname">
