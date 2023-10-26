@@ -34,7 +34,7 @@ if (mysqli_connect_errno()) {
     if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
         exit('Password must be between 5 and 20 characters long!');
     }
-
+    echo 'hhejk';
     if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
         $stmt->bind_param('s', $_POST['username']);
