@@ -22,7 +22,7 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Katter?</title>
+  <title>Katter</title>
 
   <link rel="stylesheet" href="css/GridLayout.css" type="text/css" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
@@ -61,7 +61,7 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
 
   <main class="gridMain">
     <p>Some info will be shown here as well as the login button</p>
-    <form action="html/inside.html">
+    <form action="inside/">
       <input type="submit" value="testa animationer" />
     </form>
     <div>
