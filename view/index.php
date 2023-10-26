@@ -26,7 +26,7 @@ echo $page;
 <body class="gridContainer">
   <header class="gridTop">
     <nav class="navbar">
-      <a href="inside.html" class="nav-logo">Projekt Guru</a>
+      <a href="../" class="nav-logo">Projekt Guru</a>
       <ul class="nav-menu">
         <li class="nav-item">
           <a href="?page=start" class="nav-link">start</a>

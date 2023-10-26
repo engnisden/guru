@@ -1,6 +1,6 @@
 <main class="gridMain">
     <p>Some info will be shown here as well as the login button</p>
-    <form action="inside/">
+    <form action="view/">
         <input type="submit" value="testa animationer" />
     </form>
     <div>
