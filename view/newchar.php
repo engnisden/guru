@@ -5,7 +5,7 @@ $userName = $_SESSION['userName'];
     <h3>Welcome
         <?php print $userName; ?>
     </h3>
-    <p>Name your character</p>
+    <p>Name your cccccharacter</p>
     <form class="createPlayerForm" action="../backlogic/createPlayer.php" method="post" autocomplete="off">
         <label for="charname">
             <i class="fas fa-user"></i>
