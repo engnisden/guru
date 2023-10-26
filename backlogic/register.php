@@ -89,5 +89,9 @@ if (mysqli_connect_errno()) {
     $con->close();
 }
 
-
+function returnError($error_message)
+{
+    $_SESSION['Error'] = $error_message;
+    header('Location: start.php');
+}
 ?>
