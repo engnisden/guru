@@ -51,6 +51,7 @@ if (mysqli_connect_errno()) {
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $uniqid = uniqid();
                 $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
+                echo 'ssss', $_POST['username'], $password, $_POST['email'], $uniqid;
                 $stmt->execute();
                 echo 'Trying to assing vars';
                 $from = 'noreply@engelmark.org';
