@@ -48,7 +48,10 @@ if (mysqli_connect_errno()) {
             echo 'trying to insert';
             if (!$stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
                 echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            } else {
+                echo 'do some magic';
             }
+
             if ($stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
                 echo 'Trying to hash';
@@ -74,7 +77,6 @@ if (mysqli_connect_errno()) {
 
             } else {
                 // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
-                echo 'Could not prepare statement!';
                 echo "Prepare failed: (" . $con->errno . ") " . $con->error;
             }
         }
