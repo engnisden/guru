@@ -1,3 +1,11 @@
+<?php
+
+if ($_SESSION['name'] == '') {
+  echo 'helo';
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
 
