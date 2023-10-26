@@ -12,8 +12,8 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
 }
 echo 'Kollar sessionen';
 if ($_SESSION['loggedIn']) {
-  echo 'ja du är inloggad';
-  header('Location: inside/index.php');
+  echo 'ja du är inloggad ';
+  header('Location: inside');
 }
 
 ?>
