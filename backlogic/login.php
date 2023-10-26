@@ -38,7 +38,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            header('Location: inside.php');
+            header('Location: ../inside');
         } else {
             // Incorrect password
             echo 'Incorrect username or password! Perhaps both! IDK i am script';
