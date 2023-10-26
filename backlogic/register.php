@@ -46,6 +46,9 @@ if (mysqli_connect_errno()) {
             } else {
             }
             echo 'trying to insert';
+            if (!$stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
+                echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
+            }
             if ($stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
                 echo 'Trying to hash';
@@ -55,6 +58,8 @@ if (mysqli_connect_errno()) {
                 echo 'ssss', $_POST['username'], $password, $_POST['email'], $uniqid;
                 $stmt->execute();
                 echo 'Trying to assing vars';
+
+
                 $from = 'noreply@engelmark.org';
                 $subject = 'Account Activation Required';
                 $headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $from . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-Type: text/html; charset=UTF-8' . "\r\n";
