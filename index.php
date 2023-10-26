@@ -57,7 +57,7 @@ switch ($_GET['page']) {
       <a href="#" class="nav-logo">Projekt Guru</a>
       <ul class="nav-menu">
         <li class="nav-item">
-          <a href="#" class="nav-link">Start</a>
+          <a href="index.php?page=start" class="nav-link">Start</a>
         </li>
         <li class="nav-item">
           <a href="#" class="nav-link">Updates</a>
