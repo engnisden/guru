@@ -58,8 +58,10 @@ if (mysqli_connect_errno()) {
                 // Update the activation variable below
                 $activate_link = 'http://yourdomain.com/phplogin/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
                 $message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
-                mail($_POST['email'], $subject, $message, $headers);
-                echo 'Please check your email to activate your account!';
+                if (mail($_POST['email'], $subject, $message, $headers)) {
+                    echo 'Please check your email to activate your account!';
+                }
+                echo 'something went wrong';
 
             } else {
                 // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
