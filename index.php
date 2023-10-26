@@ -1,7 +1,16 @@
 <?php
 
-if ($_SESSION['name'] == '') {
-  echo 'helo';
+if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
+  session_start();
+} else {
+  //We got an error message?
+  if ($_SESSION['ErrorMessage'] > 0) {
+    //display message
+  }
+  //is user logged in?
+  if ($_SESSION['LoggedIn']) {
+    header('Location: inside/index.php');
+  }
 }
 
 ?>
