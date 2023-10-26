@@ -34,9 +34,9 @@ if (mysqli_connect_errno()) {
     if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
         exit('Password must be between 5 and 20 characters long!');
     }
-    if ($stmt = $con->prepare('SELECT id, password FROM users WHERE name = ?')) {
+    if ($stmt = $con->prepare('SELECT id FROM users WHERE name = ? OR email = ?')) {
         // Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
-        $stmt->bind_param('s', $_POST['username']);
+        $stmt->bind_param('ss', $_POST['username'], $_POST['email']);
         $stmt->execute();
         $stmt->store_result();
         // Store the result so we can check if the account exists in the database.
@@ -44,18 +44,14 @@ if (mysqli_connect_errno()) {
             // Username already exists
             echo 'Username exists, please choose another!';
         }
-        echo 'trying to insert';
 
 
         if ($stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
             // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
-            echo 'Trying to hash';
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $uniqid = uniqid();
             $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
-            echo 'ssss', $_POST['username'], $password, $_POST['email'], $uniqid;
             $stmt->execute();
-            echo 'Trying to assing vars';
 
 
             $from = 'noreply@engelmark.org';
@@ -64,11 +60,8 @@ if (mysqli_connect_errno()) {
             // Update the activation variable below
             $activate_link = 'http://yourdomain.com/phplogin/activate.php?email=' . $_POST['email'] . '&code=' . $uniqid;
             $message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
-            echo 'Trying to mail';
-            if (mail($_POST['email'], $subject, $message, $headers)) {
-                echo 'Please check your email to activate your account!';
-            }
-            echo 'something went wrong';
+            mail($_POST['email'], $subject, $message, $headers);
+            echo 'Please check your email to activate your account!';
 
         } else {
             // Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
