@@ -25,7 +25,7 @@ if (mysqli_connect_errno()) {
         exit('Please complete the registration form');
     }
 
-    if (preg_match('/^[a-zA-ZåÅäÄöÖ-Z0-9]+$/', $_POST['username']) == 0) {
+    if (preg_match('/^[a-zA-ZåÅäÄöÖ]+$/', $_POST['username']) == 0 || preg_match('/^[Z0-9]+$/', $_POST['username'] == 0)) {
         exit('Username is not valid!');
     }
     if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
