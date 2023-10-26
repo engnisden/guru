@@ -13,26 +13,6 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
   }
 }
 
-switch ($_GET['page']) {
-  case 'start':
-    /*
-    require 'inc/news.php'; // your news functions
-    include 'tpl/news.tpl.php'; // your news template
-    */
-    echo 'Hej världen';
-    break;
-  default:
-    if ($_GET['filename'] == '') {
-      include 'tpl/home.tpl.php';
-    } else {
-      header('HTTP/1.0 404 Not Foundd');
-      include 'tpl/page_not_found.tpl.php';
-    }
-    break;
-}
-
-
-
 ?>
 
 <!DOCTYPE html>
