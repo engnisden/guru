@@ -80,14 +80,7 @@ switch ($_GET['page']) {
   <div class="gridLeft"></div>
 
   <?php
-  switch ($_GET['page']) {
-    case 'start':
-
-      require 'maincontent.php'; // your news functions
-      echo 'Hej världen';
-      break;
-  }
-
+  require 'maincontent.php';
   ?>
 
   <div class="gridRight"></div>
