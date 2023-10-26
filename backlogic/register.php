@@ -48,6 +48,7 @@ if (mysqli_connect_errno()) {
             echo 'trying to insert';
             if ($stmt = $con->prepare('INSERT INTO users (name, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
                 // We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
+                echo 'Trying to hash';
                 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
                 $uniqid = uniqid();
                 $stmt->bind_param('ssss', $_POST['username'], $password, $_POST['email'], $uniqid);
