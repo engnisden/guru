@@ -8,7 +8,7 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
     //display message
   }
   //is user logged in?
-  if ($_SESSION['LoggedIn']) {
+  if ($_SESSION['loggedIn']) {
     header('Location: inside/index.php');
   }
 }
