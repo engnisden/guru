@@ -118,7 +118,7 @@ switch ($_GET['page']) {
       <input type="submit" value="Register" />
     </form>
     <a href="index.php?page=start">
-
+      en text som länkar vidare
     </a>
   </main>
 
