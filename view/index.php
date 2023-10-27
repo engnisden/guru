@@ -43,7 +43,7 @@ if (!checkForPlayer()) {
           <a href="#" class="nav-link">About</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Contact</a>
+          <a href="?page=logout" class="nav-link">Contact</a>
         </li>
       </ul>
       <div class="hamburger">
@@ -69,6 +69,9 @@ if (!checkForPlayer()) {
       break;
     case 'newchar':
       require 'newchar.php';
+      break;
+    case 'newchar':
+      require 'lougout.php';
       break;
     default:
 
