@@ -43,7 +43,7 @@ if (!checkForPlayer()) {
           <a href="#" class="nav-link">About</a>
         </li>
         <li class="nav-item">
-          <a href="?page=logout" class="nav-link">Contact</a>
+          <a href="?page=logout" class="nav-link">Log out</a>
         </li>
       </ul>
       <div class="hamburger">
