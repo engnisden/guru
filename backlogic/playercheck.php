@@ -1,7 +1,7 @@
 <?php
 
 
-function checkActivities()
+function checkForPlayer()
 {
 
     require '../../secredret.php';
@@ -36,7 +36,6 @@ function checkActivities()
                         $_SESSION['playerId'] = $playerId;
                         return true;
                     } else {
-
                         echo 'Incorrect username or password! Perhaps both! IDK i am script';
                     }
                 } else {
