@@ -55,7 +55,7 @@ if (!checkForPlayer()) {
   </header>
   <script>
     <?php
-    include 'hamburger.js';
+    include '../js/hamburger.js';
     ?>
   </script>
 
@@ -93,8 +93,8 @@ if (!checkForPlayer()) {
   <footer class="gridBot"></footer>
   <script>
     <?php
-
-    if (true) {
+    $hello = false;
+    if ($hello) {
       include('../js/eventbar.js');
     }
 
