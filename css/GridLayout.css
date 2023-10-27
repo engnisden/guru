@@ -16,7 +16,7 @@ span {
     "footer footer footer";
   grid-template-rows: 80px 1fr 128px 70px;
   grid-template-columns: 20% 1fr 15%;
-  grid-row-gap: 10px;
+
   justify-content: end;
   height: 100vh;
   /*border: 3px solid green;*/
