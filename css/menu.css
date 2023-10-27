@@ -13,6 +13,7 @@ https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-usi
     #00ffe5,
     #00fffe
   );
+  border-radius: 15px;
 }
 
 .navbar {
