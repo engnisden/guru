@@ -5,7 +5,14 @@ https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-usi
 
 .gridTop {
   border-bottom: 1px solid #e2e8f0;
-  background-image: linear-gradient(135deg, red, white);
+  background-image: linear-gradient(
+    to right bottom,
+    #2aff4f,
+    #00ff8f,
+    #00ffc0,
+    #00ffe5,
+    #00fffe
+  );
 }
 
 .navbar {

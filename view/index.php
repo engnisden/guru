@@ -10,7 +10,7 @@ if (array_key_exists('page', $_GET)) {
 if (!checkForPlayer()) {
   $page = 'newchar';
 } else {
-
+  $page = 'start';
 }
 
 ?>
