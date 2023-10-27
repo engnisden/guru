@@ -14,7 +14,7 @@ if (array_key_exists('page', $_GET)) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Katter?</title>
+  <title>Guru</title>
 
   <link rel="stylesheet" href="../css/GridLayout.css" type="text/css" />
   <link rel="stylesheet" href="../css/main.css" type="text/css" />
@@ -52,6 +52,9 @@ if (array_key_exists('page', $_GET)) {
   <div class="gridLeft"></div>
 
   <?php
+  if (!checkActivities()) {
+    $page = 'newchar.php';
+  }
   switch ($page) {
     case 'start':
       require 'start.php';
