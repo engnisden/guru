@@ -24,7 +24,6 @@ span {
 }
 .gridTop {
   grid-area: header;
-  background-color: aqua;
 }
 .gridMain {
   grid-area: main;
