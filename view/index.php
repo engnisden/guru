@@ -24,8 +24,8 @@ if (!checkForPlayer()) {
   <link rel="stylesheet" href="../css/GridLayout.css" type="text/css" />
   <link rel="stylesheet" href="../css/main.css" type="text/css" />
   <link rel="stylesheet" href="../css/menu.css" type="text/css" />
-  <!--<link rel="stylesheet" href="../css/event.css" type="text/css" />-->
-  <link rel="stylesheet" href="../css/maincontent.css" type="text/css" />
+  <link rel="stylesheet" href="../css/event.css" type="text/css" />
+  <!--<link rel="stylesheet" href="../css/maincontent.css" type="text/css" />-->
 </head>
 
 <body class="gridContainer">
