@@ -28,7 +28,6 @@ if ($_SESSION['loggedIn']) {
   <link rel="stylesheet" href="css/GridLayout.css" type="text/css" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
   <link rel="stylesheet" href="css/menu.css" type="text/css" />
-  <link rel="stylesheet" href="css/animate.css" type="text/css" />
   <link rel="stylesheet" href="css/event.css" type="text/css" />
 </head>
 

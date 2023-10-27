@@ -13,6 +13,7 @@ https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-usi
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
+  background-image: linear-gradient(135deg, red, white);
 }
 
 .hamburger {
