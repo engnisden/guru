@@ -1,10 +1,10 @@
 <?php
+include('../backlogic/playercheck.php');
 session_start();
 
 if (array_key_exists('page', $_GET)) {
   $page = $_GET['page'];
 }
-echo $page;
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +79,7 @@ echo $page;
   <footer class="gridBot"></footer>
   <script><?php
   if (true) {
-    require('../js/eventbar.js');
+    include('../js/eventbar.js');
   }
 
   ?>
