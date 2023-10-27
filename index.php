@@ -69,23 +69,9 @@ if ($_SESSION['loggedIn']) {
   <footer class="gridBot"></footer>
 
   <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    }
-
-    function getPosition(element) {
-      var rect = element.getBoundingClientRect();
-      return {
-        x: rect.left,
-        y: rect.top,
-      };
-    }
+    <?php
+    require 'js/hamburger.js';
+    ?>
   </script>
 </body>
 

@@ -53,6 +53,11 @@ if (!checkForPlayer()) {
       </div>
     </nav>
   </header>
+  <script>
+    <?php
+    include 'hamburger.js';
+    ?>
+  </script>
 
   <div class="gridLeft"></div>
 
@@ -83,31 +88,14 @@ if (!checkForPlayer()) {
   ?>
 
   <footer class="gridBot"></footer>
-  <script><?php
-  if (true) {
-    include('../js/eventbar.js');
-  }
+  <script>
+    <?php
 
-  ?>
-
-      < script >
-  const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
+    if (true) {
+      include('../js/eventbar.js');
     }
 
-    function getPosition(element) {
-      var rect = element.getBoundingClientRect();
-      return {
-        x: rect.left,
-        y: rect.top,
-      };
-    }
+    ?>
   </script>
 
 </body>
