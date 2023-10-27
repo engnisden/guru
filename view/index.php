@@ -77,13 +77,13 @@ echo $page;
   ?>
 
   <footer class="gridBot"></footer>
-  <?php
+  <script><?php
   if (true) {
     require('../js/eventbar.js');
   }
 
   ?>
-
+  </script>
 </body>
 
 </html>
