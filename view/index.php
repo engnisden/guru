@@ -91,11 +91,12 @@ if (!checkForPlayer()) {
   ?>
 
   <footer class="gridBot"></footer>
+
   <script>
     <?php
     $hello = false;
     if ($hello) {
-      include('../js/eventbar.js');
+
     }
 
     ?>
