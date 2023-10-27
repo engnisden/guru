@@ -6,7 +6,7 @@ if (array_key_exists('page', $_GET)) {
   $page = $_GET['page'];
 }
 if (!checkForPlayer()) {
-  $page = 'newchar.php';
+  $page = 'newchar';
 } else {
 
 }
@@ -70,7 +70,7 @@ if (!checkForPlayer()) {
     case 'newchar':
       require 'newchar.php';
       break;
-    case 'newchar':
+    case 'logout':
       require 'lougout.php';
       break;
     default:
