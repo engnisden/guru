@@ -29,7 +29,7 @@ if (!checkForPlayer()) {
 </head>
 
 <body class="gridContainer">
-  <header class="gridTop">
+  <header class="gridTopp">
     <nav class="navbar">
       <a href="../" class="nav-logo">Projekt Guru</a>
       <ul class="nav-menu">
