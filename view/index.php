@@ -1,19 +1,18 @@
 <?php
-/*
+
 include('../backlogic/playercheck.php');
 session_start();
 
 if (array_key_exists('page', $_GET)) {
   $page = $_GET['page'];
 }
-*/
-/*
+
 if (!checkForPlayer()) {
   $page = 'newchar';
 } else {
 
 }
-*/
+
 ?>
 
 <!DOCTYPE html>
@@ -57,10 +56,15 @@ if (!checkForPlayer()) {
       </div>
     </nav>
   </header>
+  <script src="../js/hamburger.js"></script>
   <script>
+
     <?php
+
     include '../js/hamburger.js';
+
     ?>
+
   </script>
 
   <div class="gridLeft"></div>
@@ -82,6 +86,7 @@ if (!checkForPlayer()) {
       break;
 
   }
+
   ?>
 
 
