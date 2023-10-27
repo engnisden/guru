@@ -8,6 +8,7 @@ btn.addEventListener("click", () => {
 });
 
 function animate() {
+    pauseBg();
   setTimeout(function () {
     player.style.transform = "translateX(35px)";
     player.style.transition = "transform 0.1s ease-in-out";
@@ -36,7 +37,6 @@ function animate() {
   setTimeout(function () {
     comp2.style.transform = "translateX(0px)";
   }, 300);
-  pauseBg();
 }
 
 function pauseBg() {
