@@ -106,7 +106,11 @@ if (!checkForPlayer()) {
     }
 
   </script>
-
+  <style>
+    .gridEvent-Main {
+      visibility: hidden;
+    }
+  </style>
 </body>
 
 </html>
