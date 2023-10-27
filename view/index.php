@@ -71,7 +71,7 @@ if (!checkForPlayer()) {
       require 'newchar.php';
       break;
     case 'logout':
-      require 'lougout.php';
+      require 'logout.php';
       break;
     default:
 
