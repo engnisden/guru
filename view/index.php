@@ -77,7 +77,9 @@ echo $page;
   ?>
 
   <footer class="gridBot"></footer>
-
+  <?php
+  require('../js/eventbar.js');
+  ?>
   <script>
     var player = document.querySelector("#playerChar");
     var comp1 = document.querySelector("#companionOneObject");
