@@ -7,6 +7,8 @@ btn.addEventListener("click", () => {
   animate();
 });
 
+pauseBg();
+
 function animate() {
     pauseBg();
   setTimeout(function () {
