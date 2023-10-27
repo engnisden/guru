@@ -48,5 +48,16 @@ function pauseBg() {
     bgImageDiv.style.animationPlayState = "running";
   }
 }
+function showEventBar(hide){
+  var eb = document.querySelector(".gridEvent-Main");
+  
+  if(hide){
+    eb.style.visibility = "hidden";
+  }
+  else {
+    eb.style.visibility = "visible";
+  }
+
+}
 
 

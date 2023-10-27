@@ -94,12 +94,17 @@ if (!checkForPlayer()) {
 
   <script>
     <?php
-    $hello = false;
-    if ($hello) {
+    include('../js/eventbar.js');
+    ?>
 
+    var hello = false;
+
+    if (hello) {
+      showEventBar(true);
+    } else {
+      showEventBar(false);
     }
 
-    ?>
   </script>
 
 </body>
